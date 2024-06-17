@@ -1,0 +1,55 @@
+{% macro card(permalink, itemTitle, description, image) %}
+        <div class="grid__card__top">
+            {% if image %}
+                <img src="{{image}}" alt="" class="grid__card__top__img">
+            {% endif %}
+
+            {% if permalink %}
+                <a href="{{permalink}}" class="grid__card__top__btn"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            {% endif %}
+        </div>
+        <div class="grid__card__bottom">
+            <h4>{{itemTitle}}</h4>
+            <p>{{description}}</p>
+        </div>
+{% endmacro %}
+{% macro list(link, front, center, end) %}
+    {% if front %}
+        {% if link %}
+            <div>
+                <a href="{{link}}" class="list__link">
+                    <p>{{front}}</p>
+                    {% if center %}
+                        <p>{{center}}</p>
+                    {% endif %}
+                    <p class="list__link__end-item">
+                        {{end}}
+                    </p>
+                </a>
+            </div>
+        {% else %}
+            <div class="list--space-between">
+                <p>{{front}}</p>
+                {% if center %}
+                    <p>{{center}}</p>
+                {% endif %}
+                <p class="list__end-item">
+                    {{end}}
+                </p>
+            </div>
+        {% endif %}
+        <hr>
+    {% endif %}
+{% endmacro %}
+{% macro sideBySideImg(array) %}
+    <div class="side-by-side">
+        {% for item in array %}
+            <img src="/assets/images/{{item}}" alt="" class="side-by-side__img">
+        {% endfor %}
+    </div>
+{% endmacro %}
+{% macro banner(banner) %}
+    {% if banner %}
+        <img src="{{banner}}" alt="" class="content__banner">
+    {% endif %}
+{% endmacro %}

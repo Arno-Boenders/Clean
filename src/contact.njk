@@ -1,0 +1,24 @@
+---
+pageTitle: Contact
+order: 5
+tags: navItems
+title: Get in touch, we’ll get back to you.
+titleBtn: Send us an email
+linkBtn: /contact
+stylesheet: blocks.css
+banner: /assets/images/Rectangle 2_29.png
+---
+{% extends "layouts/header.njk" %}
+{% import "components/items.njk" as items %}
+{% import "components/buttons.njk" as button %}
+{% block content %}
+    <div class="list">
+        {% for item in info %}
+            {{items.list(null, item.value, null, item.label)}}
+        {% endfor %}
+    </div>
+    <div class="btn">{{button.headerBtn(titleBtn, linkBtn)}}</div>
+    <div class="banner-container">
+        {{items.banner(banner)}}
+    </div>
+{% endblock content %}

@@ -1,0 +1,12 @@
+{% import "components/items.njk" as items %}
+{% macro grid(array) %}
+    <div class="grid">
+        {% for item in array %}
+            <div class="grid__card">
+                <a href="{{item.data.permalink}}">
+                    {{items.card(item.data.permalink, item.data.itemTitle, item.data.description, item.data.image)}}
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+{% endmacro %}

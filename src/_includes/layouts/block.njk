@@ -1,0 +1,26 @@
+---
+
+---
+{% extends "layouts/header.njk" %}
+
+{% import "components/items.njk" as items %}
+{% import "components/grid.njk" as grid %}
+{% import "components/buttons.njk" as button %}
+{% block content %}
+    <div>
+        {{items.sideBySideImg(images)}}
+    </div>
+    {% if collections[collection] %}
+        <div>
+            <h2>{{listTitle}}</h2>
+            {% for item in collections[collection] | sortByDate%}
+                {{items.list(item.data.permalink, item.data.date | convertDate, item.data.itemTitle, item.data.description)}}
+            {% endfor %}
+        </div>
+        {% if listBtnTitle %}
+            <div class="btn">{{button.headerBtn(listBtnTitle, listLinkBtn)}}</div>
+        {% endif %}
+    {% endif %}
+
+    {% block grid %}{% endblock grid %}
+{% endblock %}

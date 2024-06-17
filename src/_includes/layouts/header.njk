@@ -1,0 +1,18 @@
+{% extends "layouts/default.njk" %}
+{% import "components/heading.njk" as heading %}
+{% import "components/buttons.njk" as buttons %}
+{% block main %}
+    <section>
+
+        <div class="header {% if not buttonTitle%} header-center {% endif %}">
+            {{heading.header(title, description, link)}}
+            {% if buttonTitle %}
+                {{buttons.headerBtn(buttonTitle, buttonLink)}}
+            {% endif %}
+        </div>
+        <hr>
+    </section>
+    <section>
+        {% block content %}{% endblock content %}
+    </section>
+{% endblock main %}

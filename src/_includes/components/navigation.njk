@@ -1,0 +1,9 @@
+{% macro nav(collection = "navItems") %}
+    <ul class="nav__list">
+        {% for item in collections[collection] | sortByOrder %}
+            <li class="nav__list__item">
+                <a href="{{item.url}}" class="nav__link">{{item.data.pageTitle}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endmacro %}

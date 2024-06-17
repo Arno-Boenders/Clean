@@ -1,0 +1,27 @@
+---
+pageTitle: Home
+order: 1
+tags: navItems
+buttonTitle: Our projects
+buttonLink: /projects
+title: We’re Clean, but we get our hands dirty. 
+images:
+    - Image 1_2.png
+    - Image 2_2.png
+collection: projects
+collection2: blogs
+stylesheet: blocks.css
+listTitle: Our projects
+gridTitle: Read our latest news
+listBtnTitle: See all our work
+listLinkBtn: /projects
+titleBtn: Read our blog
+linkBtn: /blog
+---
+{% extends "layouts/block.njk" %}
+
+{% block grid %}
+    <h2>{{gridTitle}}</h2>
+    {{ grid.grid(collections[collection2] | last3)}}
+    <div class="btn">{{button.headerBtn(titleBtn, linkBtn)}}</div>
+{% endblock grid %}

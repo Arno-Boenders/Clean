@@ -1,0 +1,6 @@
+{
+  "layout": "layouts/column.njk",
+  "tags": "blogs",
+  "link": "/blog",
+  "stylesheet": "markdown.css"
+}

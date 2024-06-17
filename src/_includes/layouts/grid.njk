@@ -1,0 +1,9 @@
+---
+
+---
+{% extends "layouts/header.njk" %}
+{% import "components/grid.njk" as grid %}
+
+{% block content %}
+    {{ grid.grid(collections[collection])}}
+{% endblock content %}

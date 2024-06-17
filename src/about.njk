@@ -1,0 +1,21 @@
+---
+pageTitle: About
+order: 4
+tags: navItems
+buttonTitle: Contact us
+buttonLink: /contact
+title: We are a creative agency with talented people. 
+images:
+    - Image 1.png
+    - Image 2.png
+    - Image 1_1.png
+    - Image 2_2.png
+collection: contacts
+stylesheet: blocks.css
+gridTitle: Meet the team
+---
+{% extends "layouts/block.njk" %}
+{% block grid %}
+    <h2>{{gridTitle}}</h2>
+    {{ grid.grid(collections[collection])}}
+{% endblock grid %}

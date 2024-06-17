@@ -1,0 +1,48 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+  height: 20rem;
+}
+.header-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.header-center .header__title {
+    max-width: 55%;
+    text-align: center;
+}
+.header__title {
+  max-width: 45%;
+  margin: 0;
+}
+.header__description{
+  margin-top: 2rem;
+}
+.header__btn {
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  padding: 1rem 3rem;
+  border-radius: 5rem;
+  text-decoration: none;
+  color: white;
+}
+
+.header__link {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+.header__link svg {
+  width: 2rem;
+}

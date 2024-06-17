@@ -1,0 +1,6 @@
+{% extends "layouts/header.njk" %}
+{% import "components/items.njk" as items %}
+{% block content %}
+    {{items.banner(banner)}}
+    <section class="content">{{content | safe}}</section>
+{% endblock content %}

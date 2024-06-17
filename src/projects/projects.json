@@ -1,0 +1,6 @@
+{
+  "layout": "layouts/column.njk",
+  "tags": "projects",
+  "link": "/projects",
+  "stylesheet": "markdown.css"
+}

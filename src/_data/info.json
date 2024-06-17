@@ -1,0 +1,14 @@
+ [
+    {
+      "value": "Korenmarkt 12, 9000 Ghent, Belgium",
+      "label": "address"
+    },
+    {
+      "value": "info@clean.be",
+      "label": "email"
+    },
+    {
+      "value": "+32 09 45 78 12",
+      "label": "phone"
+    }
+  ]
